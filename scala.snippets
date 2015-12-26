@@ -1,0 +1,48 @@
+snippet pack "Package"
+package ${1:org}.${2:package}
+endsnippet
+
+snippet imp "Import"
+import ${1:org}.${2:package}.${3:Class}
+endsnippet
+
+snippet impb "Import with Brackets"
+import ${1:org}.${2:package}.{${3:Class}}
+endsnippet
+
+snippet cclass "Case Class"
+case class ${1:classname}${2:(${3:params})}
+endsnippet
+
+snippet class "Class"
+class ${1:classname}${2:(${3:params})} {
+	${4}
+}
+endsnippet
+
+snippet def "Function"
+def ${1:name}(${2:${3:paramName}: ${4:paramType}}): ${5:returnType} =
+	
+endsnippet
+
+snippet spec "Spec Template"
+package ${1:org}.${2:package}
+
+import org.scalatest.{WordSpec, Matchers}
+
+class ${3:classname}Spec extends WordSpec with Matchers {
+	${4}
+}
+endsnippet
+
+snippet should "Should"
+"${1:description}" should {
+	${2}
+}
+endsnippet
+
+snippet in "In"
+"${1:description}" in {
+	${2}
+}
+endsnippet
